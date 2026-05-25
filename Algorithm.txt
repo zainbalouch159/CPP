@@ -1,0 +1,230 @@
+
+---
+
+HEADER
+
+```cpp
+#include <algorithm>
+```
+
+---
+
+SORT (ascending order)
+
+```cpp
+sort(arr , arr+7);
+```
+
+Example
+
+```cpp
+int arr[5]={5,1,4,2,3};
+sort(arr, arr+5);
+```
+
+Output
+
+```
+1 2 3 4 5
+```
+
+---
+
+MAX VALUE
+
+```cpp
+*max_element(arr , arr+7)
+```
+
+Example
+
+```cpp
+cout<<*max_element(arr , arr+7);
+```
+
+---
+
+MIN VALUE
+
+```cpp
+*min_element(arr , arr+7)
+```
+
+Example
+
+```cpp
+cout<<*min_element(arr , arr+7);
+```
+
+---
+
+COUNT (kitni baar value ayi)
+
+```cpp
+count(arr , arr+7 , 5);
+```
+
+Example
+
+```cpp
+cout<<count(arr , arr+7 , 5);
+```
+
+Matlab **5 kitni baar array me hai**
+
+---
+
+FIND
+
+```cpp
+find(arr , arr+7 , 25);
+```
+
+Example
+
+```cpp
+auto it = find(arr , arr+7 , 25);
+```
+
+---
+
+REVERSE
+
+```cpp
+reverse(arr , arr+7);
+```
+
+Example
+
+```
+1 2 3 4 5
+```
+
+ban jayega
+
+```
+5 4 3 2 1
+```
+
+---
+
+SWAP
+
+```cpp
+swap(a , b);
+```
+
+Example
+
+```cpp
+int a=5 , b=10;
+swap(a,b);
+```
+
+---
+
+BINARY SEARCH
+
+Array sorted hona chahiye
+
+```cpp
+binary_search(arr , arr+7 , 25);
+```
+
+Return karta hai
+
+```
+true ya false
+```
+
+---
+
+AVERAGE
+
+Average ka direct algorithm nahi hota, khud nikalte hain.
+
+Example
+
+```cpp
+int sum=0;
+
+for(int x:arr)
+sum+=x;
+
+cout<<sum/7;
+```
+
+---
+
+SUM (numeric library)
+
+Header
+
+```cpp
+#include <numeric>
+```
+
+Example
+
+```cpp
+accumulate(arr , arr+7 , 0);
+```
+
+---
+
+COMPLETE EXAMPLE
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <numeric>
+using namespace std;
+
+int main(){
+
+int arr[7]={1,253,252,2,5,25,4};
+
+sort(arr , arr+7);
+
+cout<<"Max = "<<*max_element(arr,arr+7)<<endl;
+cout<<"Min = "<<*min_element(arr,arr+7)<<endl;
+cout<<"Count of 5 = "<<count(arr,arr+7,5)<<endl;
+cout<<"Sum = "<<accumulate(arr,arr+7,0)<<endl;
+
+return 0;
+}
+```
+
+---
+
+ZAROORI BAAT
+
+Algorithm functions **iterator ya pointer range par kaam karte hain**
+
+Example
+
+```
+arr      = start
+arr+7    = end
+```
+
+---
+
+SHORT SUMMARY
+
+Important algorithms
+
+```
+sort()
+max_element()
+min_element()
+count()
+find()
+reverse()
+binary_search()
+swap()
+accumulate()
+```
+
+---
+

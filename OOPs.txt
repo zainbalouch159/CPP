@@ -1,0 +1,479 @@
+
+---
+
+OOP KYA HAI
+
+OOP ka matlab hai **program ko objects aur classes ki madad se design karna**.
+
+Real world example
+
+```
+Car = class
+Honda car = object
+```
+
+Class blueprint hoti hai
+Object us blueprint ka real instance hota hai
+
+---
+
+CLASS
+
+Class ek **user defined data type** hoti hai.
+
+Syntax
+
+```cpp
+class Student
+{
+public:
+int roll;
+string name;
+
+void display()
+{
+cout<<roll<<" "<<name;
+}
+};
+```
+
+---
+
+OBJECT
+
+Object class ka variable hota hai.
+
+Example
+
+```cpp
+Student s1;
+```
+
+Use
+
+```cpp
+s1.roll = 10;
+s1.name = "Zain";
+s1.display();
+```
+
+---
+
+ACCESS SPECIFIERS
+
+3 types hote hain
+
+public
+
+```
+har jagah access ho sakta hai
+```
+
+private
+
+```
+sirf class ke andar access hota hai
+```
+
+protected
+
+```
+class aur derived class me access hota hai
+```
+
+Example
+
+```cpp
+class A
+{
+private:
+int x;
+
+public:
+int y;
+};
+```
+
+---
+
+CONSTRUCTOR
+
+Constructor ek **special function** hota hai jo object banne par automatically run hota hai.
+
+Rules
+
+```
+same name as class
+no return type
+```
+
+Example
+
+```cpp
+class Student
+{
+public:
+
+Student()
+{
+cout<<"Constructor called";
+}
+};
+```
+
+Object banate hi run hoga.
+
+---
+
+PARAMETERIZED CONSTRUCTOR
+
+```cpp
+class Student
+{
+public:
+int roll;
+
+Student(int r)
+{
+roll = r;
+}
+};
+```
+
+Use
+
+```cpp
+Student s1(10);
+```
+
+---
+
+DESTRUCTOR
+
+Destructor object destroy hone par run hota hai.
+
+Example
+
+```cpp
+~Student()
+{
+cout<<"Object destroyed";
+}
+```
+
+---
+
+ENCAPSULATION
+
+Data aur functions ko **ek class me wrap karna**.
+
+Example
+
+```cpp
+class Bank
+{
+private:
+int balance;
+
+public:
+
+void setBalance(int b)
+{
+balance = b;
+}
+
+int getBalance()
+{
+return balance;
+}
+};
+```
+
+---
+
+INHERITANCE
+
+Ek class doosri class ki properties use kare.
+
+Example
+
+```cpp
+class Animal
+{
+public:
+void eat()
+{
+cout<<"Eating";
+}
+};
+
+class Dog : public Animal
+{
+};
+```
+
+Use
+
+```cpp
+Dog d;
+d.eat();
+```
+
+---
+
+INHERITANCE TYPES
+
+Single inheritance
+
+```
+A → B
+```
+
+Multilevel inheritance
+
+```
+A → B → C
+```
+
+Multiple inheritance
+
+```
+A + B → C
+```
+
+Hierarchical inheritance
+
+```
+A → B
+A → C
+```
+
+Hybrid inheritance
+
+```
+combination
+```
+
+---
+
+POLYMORPHISM
+
+Ek naam, multiple kaam.
+
+2 types
+
+Compile time polymorphism
+
+```
+Function overloading
+Operator overloading
+```
+
+Run time polymorphism
+
+```
+Virtual function
+```
+
+---
+
+FUNCTION OVERLOADING
+
+Same function name, different parameters.
+
+```cpp
+int add(int a,int b)
+{
+return a+b;
+}
+
+float add(float a,float b)
+{
+return a+b;
+}
+```
+
+---
+
+OPERATOR OVERLOADING
+
+Operator ka behaviour change karna.
+
+Example
+
+```cpp
+class A
+{
+public:
+int x;
+
+A operator+(A obj)
+{
+A temp;
+temp.x = x + obj.x;
+return temp;
+}
+};
+```
+
+---
+
+VIRTUAL FUNCTION
+
+Run time polymorphism ke liye use hota hai.
+
+Example
+
+```cpp
+class Base
+{
+public:
+virtual void show()
+{
+cout<<"Base";
+}
+};
+
+class Derived : public Base
+{
+public:
+void show()
+{
+cout<<"Derived";
+}
+};
+```
+
+---
+
+ABSTRACTION
+
+User ko **sirf zaroori cheez dikhana** aur internal details hide karna.
+
+Example
+
+```
+ATM machine
+```
+
+User sirf withdraw karta hai
+andar system kaise kaam karta hai pata nahi.
+
+---
+
+THIS POINTER
+
+Current object ko point karta hai.
+
+Example
+
+```cpp
+class A
+{
+int x;
+
+public:
+void set(int x)
+{
+this->x = x;
+}
+};
+```
+
+---
+
+STATIC MEMBER
+
+Static variable class ke sab objects ke liye common hota hai.
+
+Example
+
+```cpp
+class A
+{
+public:
+static int count;
+};
+
+int A::count = 0;
+```
+
+---
+
+FRIEND FUNCTION
+
+Private members ko access kar sakta hai.
+
+Example
+
+```cpp
+class A
+{
+private:
+int x;
+
+public:
+friend void show(A obj);
+};
+
+void show(A obj)
+{
+cout<<obj.x;
+}
+```
+
+---
+
+ZAROORI BAAT
+
+OOP ke 4 pillars
+
+```
+Encapsulation
+Inheritance
+Polymorphism
+Abstraction
+```
+
+---
+
+SHORT SUMMARY
+
+Class
+
+```
+blueprint
+```
+
+Object
+
+```
+class ka instance
+```
+
+Constructor
+
+```
+object banne par run
+```
+
+Destructor
+
+```
+object destroy hone par run
+```
+
+Inheritance
+
+```
+code reuse
+```
+
+Polymorphism
+
+```
+same function different behaviour
+```
+
+---
+
