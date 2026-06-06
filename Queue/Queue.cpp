@@ -51,7 +51,7 @@ public:
         rear->next = p; // Make new node next of rear
         rear = p; // Then make new node rear of Queue
     }
-    void dequeue(NODE *&front)
+    void dequeue()
     {
         if (front == nullptr) // Checking Queue is empty or not
         {
@@ -113,7 +113,7 @@ int main()
             z.enqueue();
             break;
         case 3:
-            z.dequeue(z.front);
+            z.dequeue();
             break;
         case 4:
             z.peek();
