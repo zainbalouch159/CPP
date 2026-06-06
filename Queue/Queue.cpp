@@ -40,31 +40,31 @@ public:
         int value;
         cout << "Enter data" << endl;
         cin >> value;
-        NODE *p = new NODE(value);
+        NODE *p = new NODE(value);//new node made with p name
 
-        if (rear == nullptr)
-        {
-            rear = front = p;
-            return;
+        if (rear == nullptr)// checking that Queue is empty or not 
+        {//If empty then that code execute 
+            rear = front = p; // New node is front and rear 
+            return; 
         }
 
-        rear->next = p;
-        rear = p;
+        rear->next = p; // Make new node next of rear
+        rear = p; // Then make new node rear of Queue
     }
     void dequeue(NODE *&front)
     {
-        if (front == nullptr)
+        if (front == nullptr) // Checking Queue is empty or not
         {
             cout << "Nothing to delete" << endl;
             return;
         }
-        NODE *p = front;
-        front = front->next;
-        if (front == nullptr)
+        NODE *p = front; // Pointer that point at front
+        front = front->next;    // Now Front next is Front
+        if (front == nullptr) // If front next is nullptr
         {
-            rear = nullptr;
+            rear = nullptr; // Then rear shoud also be nullptr
         }
-        delete p;
+        delete p;   // Deleting p pointer that point to front indericlty deleting front
         cout << "Deleted from front successfully" << endl;
         return;
     }
@@ -78,11 +78,11 @@ public:
         int pos = 0, i = 0;
         cout << "Enter position that you want to peek" << endl;
         cin >> pos;
-        NODE *p = front;
-        while (i != pos)
+        NODE *p = front; 
+        while (i != pos) // Stop exactly at given position
         {
             i++;
-            p = p->next;
+            p = p->next; // Pointer p that is pointing to front is go next until reach given position
             if (p == nullptr)
             {
                 cout << "That position don't exist" << endl;
