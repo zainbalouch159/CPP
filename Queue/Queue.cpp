@@ -3,9 +3,9 @@ using namespace std;
 class NODE
 {
 public:
-    int data;
-    NODE *next;
-    NODE(int value)
+    int data; // It store actual data
+    NODE *next; // next is used to go to next node
+    NODE(int value) // Constructor that set value and next
     {
         data = value;
         next = nullptr;
@@ -27,10 +27,10 @@ public:
             return;
         }
         NODE *p = front;
-        while (p != nullptr)
+        while (p != nullptr) // P is pointing to front it move to next and cout until it reach nullptr means at the end of Queue
         {
             cout << p->data << ",";
-            p = p->next;
+            p = p->next; // It help pointer to point to next node 
         }
         cout << endl;
         return;
