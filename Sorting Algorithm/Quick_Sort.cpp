@@ -64,7 +64,7 @@ int main()
     {
         cout << "\n 1. Show \n"
              << " 2. Input \n"
-             << " 3. Insertioin Sort\n"
+             << " 3. Quick Sort\n"
              << " 0. Exit" << endl;
         cin >> choice;
 
